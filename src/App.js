@@ -25,6 +25,22 @@ class App extends Component {
     this.state = {
       displayColors: this.props.allColors.sort(() => Math.random() - 0.5).slice(0, 32)
     }
+
+    setInterval(() => {
+      // Select random box
+      const randBox = Math.floor(Math.random() * this.state.displayColors.length);
+      // Select random color from allColors array
+      const randColor = Math.floor(Math.random() * this.props.allColors.length);
+      // Replace color of random box with new random color
+      const displayColors = this.state.displayColors.map((color, idx, newArr) => {
+       if(idx === randBox) {
+        color = this.props.allColors[randColor];
+        return color;
+       }
+       return color
+      });
+      this.setState({displayColors});
+    }, 300)
   }
  
   render() {
