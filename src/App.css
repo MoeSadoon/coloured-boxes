@@ -30,8 +30,10 @@
 
 .box_item {
   width: 12.5%;
-  height: 100px;
+  height: 150px;
   list-style-type: none;
+  font-size: 0; 
+  margin: 2.5px 0;
 }
 
 @keyframes App-logo-spin {
