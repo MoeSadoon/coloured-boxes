@@ -22,6 +22,18 @@
   font-size: large;
 }
 
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.box_item {
+  width: 12.5%;
+  height: 100px;
+  list-style-type: none;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

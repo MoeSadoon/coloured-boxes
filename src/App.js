@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 
 const Box = props => (
-    <p> {props.color} </p>
+    <li className="box_item" style={{backgroundColor: props.color}}> . </li>
 )
 
 const Grid = props => {
   const boxes = props.colors.map((item, idx) => {
     return(
-      <li key={idx}>
         <Box color = {item}/>
-      </li>
     )
   });
   return (
-    <ul>
+    <ul className="box_container">
       {boxes}
     </ul>
   )
